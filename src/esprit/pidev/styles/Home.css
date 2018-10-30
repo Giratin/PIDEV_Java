@@ -1,0 +1,16 @@
+.hover-Home:hover{
+    -fx-background-color: #3F25B5;
+    -fx-cursor: hand;
+}
+
+.hover-Home:hover  Text {
+    -fx-fill: #98a0a6 !important;
+}
+
+#pane{
+    -fx-background-image: url("/media/background.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 793 670;
+    -fx-background-position: center center;
+    
+}

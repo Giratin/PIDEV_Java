@@ -1,0 +1,20 @@
+.hover-Excursion:hover{
+    -fx-background-color: #3F25B5;
+    -fx-cursor: hand;
+}
+
+.hover-Excursion:hover  Text {
+    -fx-fill: #98a0a6 !important;
+}
+
+.jfx-tab-pane .headers-region {
+    -fx-background-color: #F08080;
+}
+
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #ef8181;
+}
+.jfx-tab-pane .tab-selected-line {
+    -fx-stroke: white;
+    -fx-stroke-width: 3pt;
+}

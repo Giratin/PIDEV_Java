@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="668.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.pidev.gui.ExcursionAdminController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="-8.0" layoutY="28.0" prefHeight="645.0" prefWidth="1009.0">
+         <children>
+            <Pane layoutX="8.0" prefHeight="646.0" prefWidth="116.0" style="-fx-background-color: #48A5EA;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="4.0" layoutY="19.0">
+                     <image>
+                        <Image url="@../../../media/Arrow_Left.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="myExcursions" layoutX="22.0" layoutY="19.0" prefHeight="25.0" prefWidth="94.0" text="My excursions" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Label layoutX="133.0" layoutY="31.0" text="New Excursion" textFill="#48a5ea">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="resetExcursion" layoutX="142.0" layoutY="578.0" onAction="#reset" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: brown;" text="Reset" textFill="WHITE" />
+            <JFXButton fx:id="addExcursion" layoutX="835.0" layoutY="578.0" onAction="#add" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #48A5EA;" text="Add" textFill="WHITE" />
+            <Separator layoutX="133.0" layoutY="68.0" prefHeight="1.0" prefWidth="520.0" />
+            <JFXTextField fx:id="dest" layoutX="135.0" layoutY="102.0" onAction="#adressDest" prefHeight="25.0" prefWidth="317.0" promptText="Destination" />
+            <JFXDatePicker fx:id="date" editable="false" layoutX="700.0" layoutY="99.0" prefHeight="30.0" prefWidth="200.0" promptText="Date" style="-fx-background-color: #fff;" />
+            <JFXTextField fx:id="price" layoutX="135.0" layoutY="195.0" prefHeight="25.0" prefWidth="57.0" promptText="Price" />
+            <JFXTextField fx:id="nbre" layoutX="348.0" layoutY="195.0" promptText="Number of participants" />
+            <JFXTextArea fx:id="prog" layoutX="135.0" layoutY="267.0" prefHeight="64.0" prefWidth="268.0" promptText="Program" />
+            <ImageView fx:id="vimg2" fitHeight="129.0" fitWidth="107.0" layoutX="304.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../media/Image%20symbol.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="vimg1" fitHeight="107.0" fitWidth="107.0" layoutX="142.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../media/Image%20symbol.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="vimg3" fitHeight="107.0" fitWidth="142.0" layoutX="463.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../media/Image%20symbol.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="158.0" layoutY="522.0" onAction="#img1" style="-fx-background-color: #48A5EA;" text="Add Image" />
+            <JFXButton fx:id="btn_img2" buttonType="RAISED" layoutX="320.0" layoutY="522.0" onAction="#img2" style="-fx-background-color: #48A5EA;" text="Add Image" />
+            <JFXButton fx:id="btn_img3" buttonType="RAISED" layoutX="479.0" layoutY="522.0" onAction="#img3" style="-fx-background-color: #48A5EA;" text="Add Image" />
+            <ImageView fx:id="destError" fitHeight="25.0" fitWidth="28.0" layoutX="457.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../media/error.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dateError" fitHeight="25.0" fitWidth="28.0" layoutX="904.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../media/error.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="priceError" fitHeight="25.0" fitWidth="28.0" layoutX="203.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../media/error.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="nbreError" fitHeight="25.0" fitWidth="28.0" layoutX="481.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../media/error.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="progError" fitHeight="25.0" fitWidth="28.0" layoutX="406.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../media/error.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="629.0" layoutY="167.0" prefHeight="268.0" prefWidth="372.0">
+               <children>
+                  <GoogleMapView fx:id="mapView" layoutX="-1.0" prefHeight="268.0" prefWidth="372.0" />
+               </children>
+            </Pane>
+            <TextField fx:id="longitude" layoutX="726.0" layoutY="487.0" />
+            <TextField fx:id="latitude" layoutX="726.0" layoutY="528.0" />
+            <Text layoutX="653.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Longitude">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="653.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Latitude">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Label fx:id="msg1" layoutX="676.0" layoutY="435.0" prefHeight="20.0" prefWidth="287.0" text="Please hit enter after writing your destination " textFill="RED" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="msg2" layoutX="711.0" layoutY="456.0" text="and mark destination on this map" textFill="RED" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text fill="#bc4343" layoutX="44.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Holidays Now">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="28.0" fitWidth="30.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../media/holidays.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btn_close" fitHeight="25.0" fitWidth="30.0" layoutX="975.0" layoutY="1.0" onMouseClicked="#btn_close" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../media/close_admin.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="950.0" layoutY="1.0" onMouseClicked="#btn_minimize" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../media/minimize_admin.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
